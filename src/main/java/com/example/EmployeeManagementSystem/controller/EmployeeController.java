@@ -17,6 +17,13 @@ public class EmployeeController {
     private IEmployeeService employeeService;
 
 
+    @GetMapping(value = "/")
+    public String welcome()
+    {
+        return "<h1 style='text-align:center'>Welcome To AWS Code Pipeline</h1>";
+    }
+
+
     @PostMapping(value = "/save")
     public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee)
     {
